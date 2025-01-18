@@ -42,7 +42,7 @@ export default function Header() {
             <a href="/about" className="text-gray-700 font-medium hover:text-teal-600">
               About Us
             </a>
-            <a href="/faq" className="text-gray-700 font-medium hover:text-teal-600">
+            <a href="/faq" className="text-gray-700 font-medium hover:text-teal-700">
               FAQ
             </a>
             <a href="/for-physiotherapists" className="text-gray-700 hover:text-teal-600 font-medium">
