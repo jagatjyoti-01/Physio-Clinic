@@ -17,7 +17,7 @@ const Hero = () => {
           <p className=" font-medium font-sans text-xs md:text-lg text-slate-700 w-full md:max-w-3xl md:line-clamp-3 mt-2 px-4  line-clamp-2 md:mt-8">
                 We are a team of highly skilled and experienced physiotherapists who are
                 dedicated to providing personalized care to each and every one of our 
-                patients. Our goal is to help you achieve your health and fitness goals
+                patients. Our goal is to help you achieve your health and fitness goals.
             </p>
       </div>
       {/* <div className="   flex-col border border-red-200  items-center justify-center w-full md:mix-w-3/5    h-full p-4 ml-8">
