@@ -16,7 +16,7 @@ function Home() {
       <PhysicalTherapySection/>
 
       <TrustIndicators></TrustIndicators>
- dev-Biswo
+ 
     </div>
   )
 }
