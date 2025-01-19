@@ -28,8 +28,8 @@ const Hero = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative container mx-auto px-4 h-full flex items-center">
-        <div className="max-w-2xl space-y-4 sm:space-y-6 py-12 sm:py-16 lg:py-20">
+      <div className="relative container mx-auto px-4 h-full flex items-center ">
+        <div className="max-w-4xl space-y-4 sm:space-y-6 py-12 sm:py-16 lg:py-20 ">
           {/* Eyebrow Text */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-100">
             <span className="inline-block w-2 h-2 rounded-full bg-teal-500 animate-pulse" />
@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
 
           {/* Main Heading - Responsive text sizes */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ">
             <span className="block text-gray-900 leading-tight">
               Transforming Lives with
             </span>
@@ -49,14 +49,14 @@ const Hero = () => {
           </h1>
 
           {/* Description - Adjusted for readability */}
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-xl">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed  mx-auto ">
             We are a team of highly skilled physiotherapists dedicated to
             providing personalized care. Our goal is to help you achieve optimal
             health and mobility through evidence-based treatments.
           </p>
 
           {/* CTA Buttons - Responsive layout */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 md:items-center md:justify-center">
             <a
               href="/book-appointment"
               className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-teal-600 text-white text-sm sm:text-base font-medium hover:bg-teal-700 transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-teal-200"
