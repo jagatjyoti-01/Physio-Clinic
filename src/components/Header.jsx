@@ -1,63 +1,146 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Phone, Mail, Menu, X } from 'lucide-react';
+import { FaSquareWhatsapp } from "react-icons/fa6";
 
-export default function Header() {
+function Sidebar({ isOpen, onClose }) {
   return (
-    <header className="w-full">
-      {/* Top Bar */}
-      <div className="w-full bg-gray-100">
-        <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-teal-600">📧 Request a Callback</span>
-          </div>
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <span className="text-blue-600">📞</span>
-              <span className="text-sm">Call</span>
-            </div>
-            <div className="flex items-center gap-2 text-green-600">
-              <span>🟢</span>
-              <span className="text-sm">Whatsapp</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Navigation */}
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <a href="/" className="flex items-center">
-            <img
-              src={require('../image/Friends physio1.png')}
-              alt="CB Physio Therapy"
-              className="h-16 w-auto"
-            />
-          </a>
-
-          {/* Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 lklk ">
-            <a href="/" className="text-gray-700 font-medium hover:text-teal-700">
-              Home
-            </a>
-            <a href="/about" className="text-gray-700 font-medium hover:text-teal-600">
-              About Us
-            </a>
-            <a href="/faq" className="text-gray-700 font-medium hover:text-teal-700">
-              FAQ
-            </a>
-            <a href="/for-physiotherapists" className="text-gray-700 hover:text-teal-600 font-medium">
-              For Physiotherapists
-            </a>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button className="lg:hidden p-2">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+    <div
+      className={`fixed inset-0 z-50 transition-all duration-300 ease-in-out ${
+        isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+      }`}
+      onClick={onClose}
+    >
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-md" />
+      <div
+        className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="p-4 flex justify-between items-center border-b">
+          <h2 className="text-xl font-semibold text-gray-800">Menu</h2>
+          <button
+            onClick={onClose}
+            className="p-2 rounded-full hover:bg-gray-100 transition-colors duration-300"
+            aria-label="Close menu"
+          >
+            <X className="w-6 h-6 text-gray-700" />
           </button>
         </div>
+        <nav className="p-4">
+          {['Home', 'About Us', 'FAQ', 'For Physiotherapists'].map((item) => (
+            <a
+              key={item}
+              href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
+              className="block py-3 px-5 text-gray-700 hover:bg-gray-100 rounded-lg transition-all duration-300"
+              onClick={onClose}
+            >
+              {item}
+            </a>
+          ))}
+        </nav>
+        <div className="mt-auto p-4">
+          <a
+            href="tel:+7064515926"
+            className="block mb-4 bg-blue-600 text-white py-3 px-5 text-center rounded-lg transition-all duration-300 hover:bg-blue-700"
+          >
+            Call Now
+          </a>
+          <a
+            href="https://wa.me/7064515926"
+            className="block bg-green-600 text-white  py-3 px-5 text-center rounded-lg transition-all duration-300 hover:bg-green-700"
+          >
+            WhatsApp
+          </a>
+        </div>
       </div>
-    </header>
+    </div>
   );
 }
+
+function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+
+  return (
+    <>
+      <header className="w-full fixed top-0 z-40 bg-white/80 backdrop-blur-md shadow-sm">
+        {/* Top Bar */}
+        <div className="w-full bg-gradient-to-r from-gray-50 to-gray-100">
+          <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+            <div className="group cursor-pointer flex items-center gap-2">
+              <Mail className="w-5 h-5 text-teal-600" />
+              <span className="hidden sm:inline text-sm text-teal-600 font-medium">
+                Request a Callback
+              </span>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <a
+                href="tel:+7064515926"
+                className="flex items-center gap-2 bg-blue-50 hover:bg-blue-100 text-blue-600 p-2 rounded-full transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
+              >
+                <Phone className="w-5 h-5" />
+                <span className="hidden sm:inline text-sm font-medium">Call Now</span>
+              </a>
+              <a
+                href="https://wa.me/7064515926"
+                className="flex items-center gap-2 bg-green-50 hover:bg-green-100 text-green-600 p-2 rounded-full transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
+              >
+                <FaSquareWhatsapp className="w-5 h-5" />
+                <span className="hidden sm:inline text-sm font-medium">WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Navigation */}
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            {/* Logo */}
+            <a href="/" className="relative group flex items-center">
+            <img
+          src={require('../image/Friends physio1.png')}
+          alt="CB Physio Therapy"
+          className="h-12 w-auto"
+        />
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-600 to-blue-600 group-hover:w-full transition-all duration-300" />
+            </a>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center gap-8">
+              {['Home', 'About Us', 'FAQ', 'For Physiotherapists'].map((item) => (
+                <a
+                  key={item}
+                  href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="relative group py-2"
+                >
+                  <span className="text-gray-700 font-medium group-hover:text-teal-600 transition-colors duration-300">
+                    {item}
+                  </span>
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
+                </a>
+              ))}
+            </nav>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleSidebar}
+              className="lg:hidden p-2 hover:bg-gray-100 rounded-full transition-colors duration-300"
+              aria-label="Toggle menu"
+            >
+              <Menu className="w-6 h-6 text-gray-700" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Sidebar */}
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+    </>
+  );
+}
+
+export default App;
+
