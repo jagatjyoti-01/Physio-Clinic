@@ -18,7 +18,7 @@ const Footer = () => {
           <p className="text-center md:text-left text-sm mt-2">
             Expert healthcare Physiotherapy provider specializing in diagnosing
             and treating musculoskeletal disorders for enhanced patient
-            well-being.
+            well-being
           </p>
           <div className="flex mt-4 space-x-4">
             <a href="#" className="text-teal-600 hover:text-[#2d6c5b]">
