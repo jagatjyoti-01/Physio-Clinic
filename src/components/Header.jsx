@@ -7,7 +7,7 @@ const NAV_ITEMS = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/about-us" },
   { label: "Services", path: "/services" },
-  { label: "For Physiotherapists", path: "/for-physiotherapists" },
+  { label: "Physiotherapists", path: "/physiotherapists" },
   { label: "Contact Us", path: "/contact-us" },
 ];
 
@@ -105,7 +105,7 @@ function Header({ toggleSidebar }) {
           {/* Logo */}
           <Link to="/" className="relative group flex items-center">
             <img
-              src={require("../image/Friends physio1.png")}
+              src={require("../image/logo.png")}
               alt="CB Physio Therapy"
               className="h-12 w-auto"
             />

@@ -1,58 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import back from "../image/back.webp";
-import shoulder from "../image/shoulder.webp";
-import neck from "../image/neckpain.webp";
-import knee from "../image/knee.webp";
-import stroke from "../image/stroke.webp";
-import backp from "../image/backp.png";
-import shoulderp from "../image/shoulderp.png";
-import neckp from "../image/neckp.png";
-import kneep from "../image/kneep.png";
-import strokep from "../image/Strokp.png";
+import { services } from "../data/servicesData";
 
-const services = [
-  {
-    id: "backPain",
-    img: backp,
-    title: "Back Pain",
-    description:
-      "Back pain is a common condition affecting many people, characterized by discomfort or pain in the lower or upper back. It can result from muscle strain, poor posture, or underlying medical conditions requiring professional physiotherapy treatment.",
-    image: back,
-  },
-  {
-    id: "neckPain",
-    img: neckp,
-    title: "Neck Pain",
-    description:
-      "Physiotherapy for neck pain offers tailored treatments like exercises, manual therapy, and posture correction to relieve discomfort, restore mobility, and prevent future issues, ensuring personalized care for optimal recovery.",
-    image: neck,
-  },
-  {
-    id: "shoulderPain",
-    img: shoulderp,
-    title: "Shoulder Pain",
-    description:
-      "Shoulder pain can result from various causes, including rotator cuff injuries, frozen shoulder, or tendonitis. Physiotherapy treatments often include exercises, stretches, and manual therapy to alleviate pain and restore shoulder function.",
-    image: shoulder,
-  },
-  {
-    id: "kneePain",
-    img: kneep,
-    title: "Knee Pain",
-    description:
-      "Effective physiotherapy for knee pain includes targeted exercises, manual therapy, and pain management techniques to enhance mobility and strength, aiming to restore function and alleviate discomfort for improved quality of life.",
-    image: knee,
-  },
-  {
-    id: "stroke",
-    img: strokep,
-    title: "Stroke",
-    description:
-      "A stroke occurs when blood flow to the brain is interrupted, leading to brain cell damage. Symptoms include sudden numbness, confusion, and difficulty speaking or walking. Immediate medical attention is crucial for treatment and recovery.",
-    image: stroke,
-  },
-];
+
 
 const ServicesComponent = () => {
   const [selectedService, setSelectedService] = useState(services[0]);

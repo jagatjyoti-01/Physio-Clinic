@@ -108,7 +108,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="text-center mt-10 text-sm text-[#666666]">
+      <div className="text-center mt-10 text-sm text-grey-300">
         © 2025 · Friends Physiotherapy Hospital by ZHAR TECH
       </div>
     </footer>
