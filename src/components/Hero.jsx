@@ -29,7 +29,7 @@ const Hero = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative container mx-auto px-4 h-full flex items-center  gap-8">
+      <div className="relative container mx-auto px-4 h-full flex items-center  ">
         <div className="max-w-4xl space-y-4 sm:space-y-6 py-12 sm:py-16 lg:py-20 ">
           {/* Eyebrow Text */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-100">
@@ -56,14 +56,14 @@ const Hero = () => {
           </h1>
 
           {/* Description - Adjusted for readability */}
-          <motion.p whileInView={{opacity:1}} initial={{opacity:0}}  className="text-base sm:text-lg text-gray-700 leading-relaxed  mx-auto ">
+          <motion.p whileInView={{opacity:1}} initial={{opacity:0}}  className="text-base sm:text-lg text-gray-700 leading-relaxed  mx-auto md:pt-8  ">
             We are a team of highly skilled physiotherapists dedicated to
             providing personalized care. Our goal is to help you achieve optimal
             health and mobility through evidence-based treatments.
           </motion.p>
 
           {/* CTA Buttons - Responsive layout */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 md:items-center md:justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 pt-2 sm:pt-4 md:items-center md:justify-start md:pb-14">
             <a
               href="/book-appointment"
               className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-teal-600 text-white text-sm sm:text-base font-medium hover:bg-teal-700 transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-teal-200"
