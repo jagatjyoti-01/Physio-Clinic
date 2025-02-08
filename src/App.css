@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 .caladea-regular {
   font-family: "Caladea", serif;
   font-weight: 400;
@@ -22,6 +23,32 @@
   font-weight: 700;
   font-style: italic;
 }
+
+
+.caladea-regular {
+  font-family: "Caladea", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.caladea-bold {
+  font-family: "Caladea", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.caladea-regular-italic {
+  font-family: "Caladea", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.caladea-bold-italic {
+  font-family: "Caladea", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
 
 .App {
   text-align: center;
