@@ -1,34 +1,9 @@
-'use client'
+"use client";
+import { motion } from "framer-motion";
 
 import React from "react";
 
 const Hero = () => {
-
-  return (
-    <div className=" relative hero-section  p-4 pt-1 bg-gray-100  ">
-      <img
-        src="https://www.orthoneurophysioclinic.com/wp-content/uploads/2021/07/ortho-physio.jpg"
-        alt="Hero"
-        className="hero-image h-full w-full object-cover max-h-[470px] "
-      />
-      {/* Transparent Overlay */}
-      <div className="absolute flex items-center justify-center  top-0 left-0 md:w-2/3 w-full h-full bg-slate-100 bg-opacity-30 ">
-      <div className="flex flex-col items-center justify-center ">
-      <h1 className=" capitalize text-xl md:text-5xl font-bold text-[rgb(22 127 84)] w-full max-w-3xl line-clamp-2 md:leading-tight px-4 " style={{color: 'rgb(22 127 84)'}}>
-            Transforming Lives with Personalized Physiotherapy
-          </h1>
-          <p className=" font-medium font-sans text-xs md:text-lg text-slate-700 w-full md:max-w-3xl md:line-clamp-3 mt-2 px-4  line-clamp-2 md:mt-8">
-                We are a team of highly skilled and experienced physiotherapists who are
-                dedicated to providing personalized care to each and every one of our 
-                patients. Our goal is to help you achieve your health and fitness goals
-            </p>
-      </div>
-      { <div className="   flex-col border border-red-200  items-center justify-center w-full md:mix-w-3/5    h-full p-4 ml-8">
-          
-            <p className=" text-lg text-slate-500 w-full max-w-2xl line-clamp-3 mt-4">
-                We are a team of highly skilled and experienced physiotherapists who are
-                dedicated to providing personalized care to each and every one of our
-
   const images = [
     "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format",
     "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=500&auto=format",
@@ -38,7 +13,7 @@ const Hero = () => {
     "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=500&auto=format",
     "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format",
     "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&auto=format",
-  ]; dev-Biswo
+  ];
 
   return (
     <div className="relative min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] mt-[56px] sm:mt-[72px] overflow-hidden group">
@@ -54,35 +29,54 @@ const Hero = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative container mx-auto px-4 h-full flex items-center">
-        <div className="max-w-2xl space-y-4 sm:space-y-6 py-12 sm:py-16 lg:py-20">
+      <div className="relative container mx-auto px-4 h-full flex items-center  ">
+        <div className="max-w-4xl space-y-4 sm:space-y-6 py-12 sm:py-16 lg:py-20 ">
           {/* Eyebrow Text */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-100">
-            <span className="inline-block w-2 h-2 rounded-full bg-teal-500 animate-pulse" />
-            <span className="text-xs sm:text-sm font-medium text-teal-700">
+          <div className="inline-flex items-center  justify-center gap-2 px-3 py-1 rounded-full bg-teal-50 border    ">
+            <span className=" w-2 h-2 rounded-full bg-teal-500 animate-pulse " />
+            <motion.span
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1 }}
+              className="text-xs sm:text-sm font-medium text-primary "
+            >
               Professional Care
-            </span>
+            </motion.span>
           </div>
 
           {/* Main Heading - Responsive text sizes */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-            <span className="block text-gray-900 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-custom ">
+            <motion.span
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1.3 }}
+              className="block text-gray-900 leading-tight mx-auto text-center"
+            >
               Transforming Lives with
-            </span>
-            <span className="block bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">
+            </motion.span>
+            <motion.span
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1.4 }}
+              className="block bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent mx-auto text-center"
+            >
               Personalized Physiotherapy
-            </span>
+            </motion.span>
           </h1>
 
           {/* Description - Adjusted for readability */}
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-xl">
+          <motion.p
+            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            className="text-sm sm:text-lg text-secondary2 leading-relaxed  mx-auto md:pt-4  font-custom1 text-center "
+          >
             We are a team of highly skilled physiotherapists dedicated to
             providing personalized care. Our goal is to help you achieve optimal
             health and mobility through evidence-based treatments.
-          </p>
+          </motion.p>
 
           {/* CTA Buttons - Responsive layout */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 pt-2 sm:pt-4 md:items-center md:justify-center md:pb-14 mx-auto text-center ">
             <a
               href="/book-appointment"
               className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-teal-600 text-white text-sm sm:text-base font-medium hover:bg-teal-700 transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-teal-200"
