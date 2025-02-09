@@ -42,7 +42,7 @@ const Hero = () => {
           </div>
 
           {/* Main Heading - Responsive text sizes */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-custom ">
             <motion.span whileInView={{opacity:1,y:0}}
       initial={{opacity: 0,y:-100}}
       transition={{duration:1.3}} className="block text-gray-900 leading-tight">
@@ -56,7 +56,7 @@ const Hero = () => {
           </h1>
 
           {/* Description - Adjusted for readability */}
-          <motion.p whileInView={{opacity:1}} initial={{opacity:0}}  className="text-base sm:text-lg text-gray-700 leading-relaxed  mx-auto md:pt-8  ">
+          <motion.p whileInView={{opacity:1}} initial={{opacity:0}}  className="text-sm sm:text-lg text-gray-700 leading-relaxed  mx-auto md:pt-8  font-custom1 ">
             We are a team of highly skilled physiotherapists dedicated to
             providing personalized care. Our goal is to help you achieve optimal
             health and mobility through evidence-based treatments.

@@ -4,11 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#15B9D9', // Custom primary color
+        primary: '#0D9488', // Custom primary color
         secondary: '#202135', // Custom secondary color
+        secondary2:'#8D8D8D'
       },
       fontFamily: {
-        custom: ['caladea-regular', 'sans-serif'], // Custom font
+        custom: ['playfair'], // Custom font
+        custom1: ['caladea-regular', 'sans-serif'], // Custom font
+        custom2: ['caladea-regular-italic', 'sans-serif'], // Custom font
+
       },
     },
   },
