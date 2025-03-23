@@ -1,4 +1,5 @@
-'use client'
+"use client";
+import { motion } from "framer-motion";
 
 import React from "react";
 
@@ -28,35 +29,54 @@ const Hero = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative container mx-auto px-4 h-full flex items-center">
-        <div className="max-w-2xl space-y-4 sm:space-y-6 py-12 sm:py-16 lg:py-20">
+      <div className="relative container mx-auto px-4 h-full flex items-center  ">
+        <div className="max-w-4xl space-y-4 sm:space-y-6 py-12 sm:py-16 lg:py-20 ">
           {/* Eyebrow Text */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-100">
-            <span className="inline-block w-2 h-2 rounded-full bg-teal-500 animate-pulse" />
-            <span className="text-xs sm:text-sm font-medium text-teal-700">
+          <div className="inline-flex items-center  justify-center gap-2 px-3 py-1 rounded-full bg-teal-50 border    ">
+            <span className=" w-2 h-2 rounded-full bg-teal-500 animate-pulse " />
+            <motion.span
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1 }}
+              className="text-xs sm:text-sm font-medium text-primary "
+            >
               Professional Care
-            </span>
+            </motion.span>
           </div>
 
           {/* Main Heading - Responsive text sizes */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-            <span className="block text-gray-900 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-custom ">
+            <motion.span
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1.3 }}
+              className="block text-gray-900 leading-tight mx-auto text-center"
+            >
               Transforming Lives with
-            </span>
-            <span className="block bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">
+            </motion.span>
+            <motion.span
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1.4 }}
+              className="block bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent mx-auto text-center"
+            >
               Personalized Physiotherapy
-            </span>
+            </motion.span>
           </h1>
 
           {/* Description - Adjusted for readability */}
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-xl">
+          <motion.p
+            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            className="text-sm sm:text-lg text-secondary2 leading-relaxed  mx-auto md:pt-4  font-custom1 text-center "
+          >
             We are a team of highly skilled physiotherapists dedicated to
             providing personalized care. Our goal is to help you achieve optimal
             health and mobility through evidence-based treatments.
-          </p>
+          </motion.p>
 
           {/* CTA Buttons - Responsive layout */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 pt-2 sm:pt-4 md:items-center md:justify-center md:pb-14 mx-auto text-center ">
             <a
               href="/book-appointment"
               className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-teal-600 text-white text-sm sm:text-base font-medium hover:bg-teal-700 transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-teal-200"
