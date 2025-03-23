@@ -9,7 +9,7 @@ const Testimonial = () => {
     {
       name: "Emily Carter",
       location: "Los Angeles, USA",
-      text: "Absolutely amazing service! The food was fresh, and delivery was on time. Highly recommend!",
+      text: "Absolutely amazing service! jj food was fresh, and delivery was on time. Highly recommend!",
       rating: 5,
       image: image,
     },
