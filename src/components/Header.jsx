@@ -60,7 +60,7 @@ function Sidebar({ isOpen, onClose }) {
             href="https://wa.me/7064515926"
             className="block bg-green-600 text-white py-3 px-5 text-center rounded-lg transition-all duration-300 hover:bg-green-700"
           >
-            WhatsApp
+            WhatsApppp
           </a>
         </div>
       </div>

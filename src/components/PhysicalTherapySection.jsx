@@ -16,24 +16,59 @@ export default function PhysicalTherapySection() {
   // Original Services Data
   const services = [
     {
-      title: "CLINIC TREATMENTS",
+      title: "Clinic Treatments",
       description:
         "High quality physiotherapy care at our CB Physiotherapy Centre near you. Best Treatment for Ortho / Neuro issues",
-      image: "https://cbphysiotherapy.in/frontend/img/clinic_treatments.webp",
+      image: "/assets/service-1.jpg",
       alt: "Physical therapy clinic interior with treatment table",
     },
     {
-      title: "PHYSIO HOME VISITS",
+      title: " Physiotherapy at Home",
       description:
         "Home Visits by certified CB Physiotherapists for Patients with mobility issues & for patients looking for convenience",
-      image: "https://cbphysiotherapy.in/frontend/img/physio_home_visits.webp",
+      image: "/assets/service-2.jpg",
       alt: "Physiotherapist providing home treatment",
     },
     {
-      title: "DIGITAL CARE (FIZO)",
+      title: "Heat & Cold Therapy",
       description:
         "Digital Physio Assistant FIZO for personalized PT exercises at home. Enables affordable & long-term care Mgmt",
-      image: "https://cbphysiotherapy.in/frontend/img/post_care.webp",
+      image: "/assets/service-3.jpg",
+      alt: "Patient using digital physiotherapy platform",
+    },
+    {
+      title: "Chiropatic Therapy",
+      description:
+        "Digital Physio Assistant FIZO for personalized PT exercises at home. Enables affordable & long-term care Mgmt",
+      image: "/assets/service-4.jpg",
+      alt: "Patient using digital physiotherapy platform",
+    },
+    {
+      title: "Work Injuries",
+      description:
+        "Digital Physio Assistant FIZO for personalized PT exercises at home. Enables affordable & long-term care Mgmt",
+      image: "/assets/service-5.jpg",
+      alt: "Patient using digital physiotherapy platform",
+    },
+    {
+      title: "Spot Injuries",
+      description:
+        "Digital Physio Assistant FIZO for personalized PT exercises at home. Enables affordable & long-term care Mgmt",
+      image: "/assets/service-6.jpg",
+      alt: "Patient using digital physiotherapy platform",
+    },
+    {
+      title: "Regular Therapy",
+      description:
+        "Digital Physio Assistant FIZO for personalized PT exercises at home. Enables affordable & long-term care Mgmt",
+      image: "/assets/service-7.jpg",
+      alt: "Patient using digital physiotherapy platform",
+    },
+    {
+    title: " Back Pain",
+      description:
+        "Digital Physio Assistant FIZO for personalized PT exercises at home. Enables affordable & long-term care Mgmt",
+      image: "/assets/service-8.jpg",
       alt: "Patient using digital physiotherapy platform",
     },
   ];
@@ -91,6 +126,7 @@ export default function PhysicalTherapySection() {
   ];
 
   return (
+
     <section className="max-w-7xl mx-auto px-4 py-12 md:py-16">
       {/* SECTION HEADING */}
       <motion.div
@@ -107,14 +143,19 @@ export default function PhysicalTherapySection() {
           care and ensure the convenience of accessing Physiotherapy Clinic
           services in Bhubaneswar from Consultation to Treatment to
           Post-Treatment care.
+
+    
+
         </p>
       </motion.div>
 
       {/* ORIGINAL 3 SERVICES */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
         {services.map((service, index) => (
           <motion.div
             key={index}
+
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -133,8 +174,10 @@ export default function PhysicalTherapySection() {
                 src={service.image || "/placeholder.svg"}
                 alt={service.alt}
                 className="w-full h-full object-cover mix-blend-multiply"
+
               />
             </div>
+
 
             {/* Service Info */}
             <div className="p-6 text-center relative z-10">
@@ -142,6 +185,7 @@ export default function PhysicalTherapySection() {
                 {service.title}
               </h3>
               <p className="text-gray-600 group-hover:text-red-600 transition-colors">
+
                 {service.description}
               </p>
             </div>

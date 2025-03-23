@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div>
       <Header />
-      <div className="flex flex-col mt-24 items-center justify-center">
+      <div className="flex flex-col mt-24 items-center justify-center ">
         <AboutUs />
       </div>
       <Footer />
