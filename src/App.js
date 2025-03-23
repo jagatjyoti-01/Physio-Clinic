@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about-us" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
-        <Route path="/for-physiotherapists" element={<PhysiotherapistsPage />} />
+        <Route path="/physiotherapists" element={<PhysiotherapistsPage />} />
         <Route path="/contact-us" element={<Contact />} />
       </Routes>
     </Router>

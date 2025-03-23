@@ -1,117 +1,174 @@
 import React from "react";
+import { motion } from "framer-motion";
 import logo from "../image/logo.png";
+import Footerimg from "../image/footerimg.jpg";
+import { PiArrowCircleUpBold } from "react-icons/pi";
+import { TiSocialFacebook } from "react-icons/ti";
+import { SlSocialTwitter } from "react-icons/sl";
+import { SlSocialInstagram } from "react-icons/sl";
+import { TiSocialLinkedin } from "react-icons/ti";
+import { TbShare3 } from "react-icons/tb";
 
 const Footer = () => {
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling
+    });
+  };
+
   return (
-    <footer className="bg-[#0f766e] text-[#fff] py-10">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-5">
-        {/* Logo and Description */}
-        <div className="flex flex-col items-center md:items-start">
-          <img
-            src={logo}
-            alt="Friends Physiotherapy Hospital"
-            className="w-50 h-20"
-          />
-          <h2 className="text-xl font-bold mt-3 text-center md:text-left">
-            FRIENDS PHYSIOTHERAPY HOSPITAL
-          </h2>
-          <p className="text-center md:text-left text-sm mt-2">
-            Expert healthcare Physiotherapy provider specializing in diagnosing
-            and treating musculoskeletal disorders for enhanced patient
-            well-being
-          </p>
-          <div className="flex mt-4 space-x-4">
-            <a href="#" className="text-teal-600 hover:text-[#2d6c5b]">
-              <i className="fab fa-facebook-f text-2xl"></i>
-            </a>
-            <a href="#" className="text-teal-600 hover:text-[#2d6c5b]">
-              <i className="fab fa-youtube text-2xl"></i>
-            </a>
-            <a href="#" className="text-teal-600 hover:text-[#2d6c5b]">
-              <i className="fab fa-twitter text-2xl"></i>
-            </a>
-            <a href="#" className="text-teal-600 hover:text-[#2d6c5b]">
-              <i className="fab fa-instagram text-2xl"></i>
-            </a>
-          </div>
+    <div
+      className="relative py-10 px-4 sm:px-6 lg:px-28 text-white"
+      style={{
+        backgroundImage: `url(${Footerimg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Overlay to fade the background image */}
+      <div className="absolute inset-0 bg-black bg-opacity-90"></div>
+
+      <div className="container relative mx-auto px-4 sm:px-6 z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-4"
+          >
+            <div>
+              <img src={logo} alt="logo" className="w-32 h-auto" />
+            </div>
+            <p className="text-gray-400 text-sm sm:text-base">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorem impedit eos autem dolores laudantium quia, qui similique.
+            </p>
+            <div className="flex items-center space-x-3">
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                href="#"
+                className="text-white bg-transparent p-2"
+              >
+                <TbShare3 />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                href="#"
+                className="text-white bg-blue-500 p-2 rounded-full"
+              >
+                <TiSocialFacebook />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                href="#"
+                className="text-white bg-blue-400 p-2 rounded-full"
+              >
+                <SlSocialTwitter />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                href="#"
+                className="text-white bg-pink-500 p-2 rounded-full"
+              >
+                <SlSocialInstagram />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                href="#"
+                className="text-white bg-blue-700 p-2 rounded-full"
+              >
+                <TiSocialLinkedin />
+              </motion.a>
+            </div>
+          </motion.div>
+
+          {/* Quick Links */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="space-y-3"
+          >
+            <h4 className="text-xl font-semibold">Quick Links</h4>
+            {["About Us", "Contact Us", "Privacy Policy", "Terms & Conditions", "Our Blog & News", "Our Team"].map((item, index) => (
+              <motion.a
+                key={index}
+                whileHover={{ x: 5, color: "#38bdf8" }}
+                href="#"
+                className="text-gray-400 block text-sm sm:text-base"
+              >
+                <i className="fas fa-angle-right mr-2"></i> {item}
+              </motion.a>
+            ))}
+          </motion.div>
+
+          {/* Services */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="space-y-3"
+          >
+            <h4 className="text-xl font-semibold">Terapia Services</h4>
+            {["All Services", "Physiotherapy", "Diagnostics", "Manual Therapy", "Massage Therapy", "Rehabilitation"].map((service, index) => (
+              <motion.a
+                key={index}
+                whileHover={{ x: 5, color: "#38bdf8" }}
+                href="#"
+                className="text-gray-400 block text-sm sm:text-base"
+              >
+                <i className="fas fa-angle-right mr-2"></i> {service}
+              </motion.a>
+            ))}
+          </motion.div>
+
+          {/* Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="space-y-3"
+          >
+            <h4 className="text-xl font-semibold">Contact Info</h4>
+            <p className="text-gray-400 text-sm sm:text-base">
+              <i className="fa fa-map-marker-alt mr-2"></i> 123 Street, New York, USA
+            </p>
+            <p className="text-gray-400 text-sm sm:text-base">
+              <i className="fas fa-envelope mr-2"></i> info@example.com
+            </p>
+            <p className="text-gray-400 text-sm sm:text-base">
+              <i className="fas fa-phone mr-2"></i> +012 345 67890
+            </p>
+          </motion.div>
         </div>
 
-        {/* Quick Links */}
-        <div>
-          <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <a href="#" className="hover:underline">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                About us
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Contact us
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Support */}
-        <div>
-          <h3 className="text-lg font-bold mb-4">Support</h3>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <a href="#" className="hover:underline">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Terms & Conditions
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Return And Refund Policy
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Hospital Details */}
-        <div>
-          <h3 className="text-lg font-bold mb-4">Our Hospital</h3>
-          <p className="text-sm">
-            <span className="font-bold">Address:</span> No.1 ICICI Bank
-            Building, Sathy Road, Saravanampatti, Coimbatore - 641035
+        {/* Footer Bottom */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="mt-10 flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-5"
+        >
+          <p className="text-gray-400 text-sm sm:text-base text-center md:text-left mb-4 md:mb-0">
+            © Friends Physio . All rights reserved.
           </p>
-          <p className="text-sm mt-2">
-            <span className="font-bold">Phone:</span> +91 4893744389, +91
-            7598475398
+          <p className="text-gray-400 text-sm sm:text-base text-center md:text-left mb-4 md:mb-0">
+            Designed by <a href="#" className="text-blue-400 hover:underline">XYZ</a>
           </p>
-          <p className="text-sm mt-2">
-            <span className="font-bold">Email:</span>{" "}
-            <a href="mailto:friendsphysio@gmail.com" className="hover:underline">
-              dfkjsbvfbsbs@gmail.com
-            </a>
-          </p>
-          <p className="text-sm mt-2">
-            <span className="font-bold">Hours:</span> Mon - Sat: 8:00 AM - 9:00
-            PM, Sun: 9:00 AM - 1:00 PM
-          </p>
-        </div>
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            onClick={scrollToTop} // Add onClick event to scroll to top
+            className="bg-blue-500 text-white p-3 rounded-full shadow-lg cursor-pointer"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <PiArrowCircleUpBold />
+          </motion.a>
+        </motion.div>
       </div>
-      <div className="text-center mt-10 text-sm text-[#666666]">
-        © 2025 · Friends Physiotherapy Hospital by ZHAR TECH
-      </div>
-    </footer>
+    </div>
   );
 };
 
