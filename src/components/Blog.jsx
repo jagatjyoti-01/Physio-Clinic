@@ -11,7 +11,7 @@ const BlogSection = () => {
       date: '01 Jan 2025',
       title: 'Remove Back Pain While Working on o physio',
       comments: '3 Comments',
-      description: 'Lorem ipsum dolor sit h amet consectetur adipiscing elit. Laudantium hic consequatur beatae architecto,',
+      description: 'Lorem ipsum dolor sit  amet consectetur adipiscing elit. Laudantium hic consequatur beatae architecto,',
     },
     {
       id: 2,
