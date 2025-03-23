@@ -7,6 +7,8 @@ import AboutUs from '../components/AboutUs'
 import TrustIndicators from '../components/TrustIndicators'
 import ServicesComponent from '../components/Services'
 import Footer from '../components/Footer'
+import Testimonial from '../components/Testimonial'
+import BlogSection from '../components/Blog'
 
 
 function Home() {
@@ -18,6 +20,8 @@ function Home() {
       <PhysicalTherapySection/>
       <TrustIndicators/>
       <ServicesComponent/>
+      <Testimonial/>
+      <BlogSection/>
       <Footer/>
     </div>
   )
