@@ -12,6 +12,9 @@ import Testimonial from '../components/Testimonial'
 import BlogSection from '../components/Blog'
 
 import WhyChoseUs from '../components/WhyChoseUs'
+import  ContactUs  from '../components/Contact'
+
+//import Contact from './Contact'
 
 
 function Home() {
@@ -28,6 +31,7 @@ function Home() {
       <BlogSection/>
 
       <WhyChoseUs/>
+      <ContactUs/>
 
       <Footer/>
     </div>
