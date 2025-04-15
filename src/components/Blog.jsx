@@ -85,9 +85,9 @@ const BlogSection = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">{post.title}</h3>
                 <p className="text-gray-600 mb-6">{post.description}</p>
-                <button className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors duration-300">
+                <a href="/BlogPage"><button className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors duration-300">
                   Read More
-                </button>
+                </button></a>
               </div>
             </div>
           ))}

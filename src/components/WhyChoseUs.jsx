@@ -18,6 +18,21 @@ function WhyChoseUs() {
       title: "Modern Equipment",
       description: "State-of-the-art physiotherapy tools for pain management, rehab, and performance training.",
     },
+    {
+      icon: <FaStethoscope className="text-4xl text-primary mb-4" />,
+      title: "Expert Therapists",
+      description: "Our certified therapists tailor each session to your unique needs for effective recovery.",
+    },
+    {
+      icon: <FaHeart className="text-4xl text-primary mb-4" />,
+      title: "Holistic Care",
+      description: "We focus on both mind and body to ensure complete wellness and long-lasting relief.",
+    },
+    {
+      icon: <FaUserMd className="text-4xl text-primary mb-4" />,
+      title: "Modern Equipment",
+      description: "State-of-the-art physiotherapy tools for pain management, rehab, and performance training.",
+    },
   ];
 
   return (

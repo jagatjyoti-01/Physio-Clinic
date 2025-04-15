@@ -5,6 +5,7 @@ import AboutPage from './pages/About';
 import ServicesPage from './pages/Services';
 import PhysiotherapistsPage from './pages/ForPhysotherapist';
 import Contact from './pages/Contact';
+import BlogPage from './components/BlogPage';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/physiotherapists" element={<PhysiotherapistsPage />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/BlogPage" element={<BlogPage />} />
       </Routes>
     </Router>
   );
