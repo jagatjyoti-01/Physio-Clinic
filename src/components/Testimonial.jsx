@@ -59,47 +59,44 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="py-12 px-4 flex justify-center border-spacing-4 items-center min-h-[300px] relative">
-      <div className="max-w-4xl w-full text-center relative">
+    <div className="py-12 px-4 flex justify-center items-center min-h-[300px] relative bg-cover bg-center" style={{ backgroundImage: `url(${testimonials[currentIndex].image})` }}>
+      <div className="absolute inset-0 bg-black bg-opacity-30"></div> {/* Optional overlay for better text visibility */}
+      <div className="max-w-4xl w-full text-center relative z-10">
         <div className="mb-6">
-          <span className="text-blue-800 text-xl font-semibold uppercase tracking-wider">
+          <span className="text-blue-800 text-lg md:text-xl font-semibold uppercase tracking-wider">
             TESTIMONIAL
           </span>
-          <h2 className="text-4xl font-bold text-black mt-2">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mt-2">
             What Clients Are Saying
           </h2>
         </div>
 
         <div className="relative">
-          <div className="relative z-10 p-6 bg-white-400 rounded-lg shadow-lg transition-all duration-500 ease-in-out flex items-center">
+          <div className="relative z-10 p-4 md:p-6 bg-white rounded-lg shadow-lg transition-all duration-500 ease-in-out flex flex-col md:flex-row items-center">
             <img
               src={testimonials[currentIndex].image}
               alt={`${testimonials[currentIndex].name}'s profile`}
-              className="w-24 h-24 rounded-full border-4 border-blue-300 mr-6"
+              className="w-16 h-16 md:w-20 md:h-24 rounded-full border-4 border-blue-300 mb-4 md:mb-0 md:mr-6"
             />
-            <div className="text-left">
-              <p className="text-gray-600 text-lg italic mb-4">
+            <div className="text-center md:text-left">
+              <p className="text-gray-600 text-sm md:text-lg italic mb-4">
                 "{testimonials[currentIndex].text}"
               </p>
-              <p className="font-semibold text-blue-800 text-xl">
+              <p className="font-semibold text-blue-800 text-lg md:text-xl">
                 {testimonials[currentIndex].name}
               </p>
               <div className="flex flex-col space-y-1 mt-2 text-gray-600">
-                <div className="flex items-center">
+                <div className="flex items-center justify-center md:justify-start">
                   <span>{testimonials[currentIndex].location}</span>
                 </div>
-                <div className="flex text-yellow-500 mt-2">
+                <div className="flex justify-center md:justify-start text-yellow-500 mt-2">
                   {Array.from({ length: testimonials[currentIndex].rating }, (_, i) => (
-                    <FaStar key={i} className="text-2xl" />
+                    <FaStar key={i} className="text-xl md:text-2xl" />
                   ))}
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Light purple gradient circles */}
-          <div className="absolute top-0 left-0 w-32 h-32 bg-green-200 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-50"></div>
-          <div className="absolute bottom-0 right-0 w-32 h-32 bg-blue-200 rounded-full translate-x-1/2 translate-y-1/2 opacity-50"></div>
 
           {/* Pagination Dots */}
           <div className="flex justify-center mt-4 space-x-2">
@@ -107,7 +104,7 @@ const Testimonial = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full ${
+                className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${
                   currentIndex === index ? 'bg-blue-800' : 'bg-gray-300'
                 } transition-colors duration-300`}
               />
@@ -117,10 +114,10 @@ const Testimonial = () => {
           {/* Navigation Buttons */}
           <button
             onClick={handlePrev}
-            className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 bg-blue-300 rounded-full p-2 shadow-md hover:bg-blue-400 hover:scale-110 transition-all duration-300"
+            className="absolute left-[-20px] md:left-[-40px] top-1/2 transform -translate-y-1/2 bg-blue-300 rounded-full p-1 md:p-2 shadow-md hover:bg-blue-400 hover:scale-110 transition-all duration-300"
           >
             <svg
-              className="w-6 h-6 text-white"
+              className="w-4 h-4 md:w-6 md:h-6 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -131,10 +128,10 @@ const Testimonial = () => {
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 bg-blue-300 rounded-full p-2 shadow-md hover:bg-blue-400 hover:scale-110 transition-all duration-300"
+            className="absolute right-[-20px] md:right-[-40px] top-1/2 transform -translate-y-1/2 bg-blue-300 rounded-full p-1 md:p-2 shadow-md hover:bg-blue-400 hover:scale-110 transition-all duration-300"
           >
             <svg
-              className="w-6 h-6 text-white"
+              className="w-4 h-4 md:w-6 md:h-6 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

@@ -155,7 +155,7 @@ const Footer = () => {
             © Friends Physio . All rights reserved.
           </p>
           <p className="text-gray-400 text-sm sm:text-base text-center md:text-left mb-4 md:mb-0">
-            Designed by <a href="#" className="text-blue-400 hover:underline">XYZ</a>
+            Designed by <a href="#" className="text-blue-400 hover:underline">Biswa and jagat team</a>
           </p>
           <motion.a
             whileHover={{ scale: 1.2 }}
