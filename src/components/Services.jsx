@@ -63,7 +63,7 @@ const ServicesComponent = () => {
             </h2>
           </div>
           {/* Description */}
-          <p className="text-sm md:text-md mb-2 font-custom2 text-secondary2">{selectedService.description}</p>
+          <p className="text-sm md:text-md mb-4 font-custom2 text-secondary2">{selectedService.description}</p>
           {/* Button */}
           <button className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-teal-600 text-white text-sm sm:text-base font-medium hover:bg-teal-700 transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-teal-200">
             Contact Now

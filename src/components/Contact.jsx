@@ -63,7 +63,7 @@ export default function ContactUs() {
                 Body Relaxation
               </h3>
               <p className="text-gray-500">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                Lorem met, consectetur adipisicing elit. Et
                 deserunt qui cupiditate veritatis enim ducimus.
               </p>
             </div>
