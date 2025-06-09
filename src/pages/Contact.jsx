@@ -36,7 +36,7 @@ const Contact = () => {
           <div className="flex items-center justify-center space-x-4 animate-slide-in delay-300">
             <FaMapMarkerAlt className="text-xl text-green-500" />
             <span className="text-lg text-gray-700">
-              Physotherapy Hospital, Bhubaneswar, Odisha, India
+              Physotherapy Hospital, Bhubaneswar, Odisha, Indiaa
             </span>
           </div>
         </div>
