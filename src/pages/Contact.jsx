@@ -17,7 +17,7 @@ const Contact = () => {
       <Header />
       <div className="flex flex-col items-center justify-center my-12 px-4">
         <h1 className="text-4xl font-bold text-center mt-20 text-gray-800 animate-fade-in">
-          Contact Us
+          Contact Uss
         </h1>
         <p className="text-lg text-center mt-5 text-gray-600 animate-slide-in">
           Feel free to reach out to us for any queries or information.
