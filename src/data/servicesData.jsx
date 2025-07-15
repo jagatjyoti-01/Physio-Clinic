@@ -215,7 +215,7 @@ export const services = [
   {
     id: "stroke",
     img: strokep,
-    title: "Stroke",
+    title: "Strokee",
     description:
       "A stroke occurs when blood flow to the brain is interrupted, leading to brain cell damage. Symptoms include sudden numbness, confusion, and difficulty speaking or walking. Immediate medical attention is crucial for treatment and recovery.",
     image: stroke,
