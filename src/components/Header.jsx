@@ -51,13 +51,13 @@ function Sidebar({ isOpen, onClose }) {
         </nav>
         <div className="mt-auto p-4">
           <a
-            href="tel:+7064515926"
+            href="tel:+8328906371"
             className="block mb-4 bg-blue-600 text-white py-3 px-5 text-center rounded-lg transition-all duration-300 hover:bg-blue-700"
           >
             Call Now
           </a>
           <a
-            href="https://wa.me/7064515926"
+            href="https://wa.me/8328906371"
             className="block bg-green-600 text-white py-3 px-5 text-center rounded-lg transition-all duration-300 hover:bg-green-700"
           >
             WhatsApppp

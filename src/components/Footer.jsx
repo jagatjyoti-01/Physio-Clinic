@@ -133,13 +133,18 @@ const Footer = () => {
           >
             <h4 className="text-xl font-semibold">Contact Info</h4>
             <p className="text-gray-400 text-sm sm:text-base">
-              <i className="fa fa-map-marker-alt mr-2"></i> 123 Street, New York, USA
+              <i className="fa fa-map-marker-alt mr-2"></i>1. Aqua Club  2nd Fllor Royal Lagoon  Appartment BBSR
+              <br />
+              <i className="fa fa-map-marker-alt mr-2"></i>2. Ground floor Tower G manitribhuban  Appartment BBSR
+              <br />
+              <i className="fa fa-map-marker-alt mr-2"></i>3. Ground floor Tower B Z1  Appartment  BBSR
             </p>
             <p className="text-gray-400 text-sm sm:text-base">
-              <i className="fas fa-envelope mr-2"></i> info@example.com
+              <i className="fas fa-envelope mr-2"></i> debijayadashpt@gmail.com
             </p>
             <p className="text-gray-400 text-sm sm:text-base">
-              <i className="fas fa-phone mr-2"></i> +012 345 67890
+              <i className="fas fa-phone mr-2"></i> +91 8325906371 
+              <i className="fas fa-phone mr-2"></i> +91 6372304687 
             </p>
           </motion.div>
         </div>
