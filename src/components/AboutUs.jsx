@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Target, Crosshair } from "lucide-react";
 import image from "../image/aboutImage.png"; // Update with your local image path
 import { FaArrowRight } from "react-icons/fa6";
-import { div } from "framer-motion/client";
+
 
 const AboutUs = () => {
   return (

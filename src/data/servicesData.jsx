@@ -223,4 +223,9 @@ export const services = [
 ];
 
 
-export default {services,servicesData};
+  const data = {
+  services,
+  servicesData,
+};
+
+export default data;
